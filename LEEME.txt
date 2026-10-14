@@ -1,0 +1,40 @@
+INTEGRALES DOBLES — PROGRAMA VISUAL
+=====================================
+Archivo principal: app_integrales_dobles.py
+
+REQUISITOS
+----------
+Python 3.10 o mayor. Instalar librerías una sola vez:
+    pip install sympy numpy matplotlib scipy
+
+CÓMO EJECUTAR
+-------------
+    python app_integrales_dobles.py
+
+QUÉ HACE
+--------
+- Resuelve integrales dobles cartesianas: ∫_a^b ∫_c(x)^d(x) f(x,y) dy dx
+- Resuelve integrales en polares: ∫_θ0^θ1 ∫_r0^r1 f(r,θ)·r dr dθ
+- Muestra el PASO A PASO (integral interior, exterior, cambio x=r·cosθ, y=r·senθ, jacobiano r)
+- Grafica la región R en 2D y la superficie z=f(x,y) en 3D (el volumen = integral)
+- Si en cartesianas sale erf/erfi (como e^(x²+y²)), detecta solo que debe ir a polares
+  y lo resuelve por polares automáticamente, igual que en tu pizarra.
+
+EJEMPLOS YA CARGADOS (combobox de arriba)
+-----------------------------------------
+1) Semicírculo: f=x², x=-1..1, y=0..sqrt(1-x²)  →  π/8 ≈ 0.3927
+2) f=exp(x²+y²), x=0..1, y=0..sqrt(1-x²) → π(e-1)/4 ≈ 1.3495
+   (en cartesianas no sale, en polares: ∫0^{π/2}∫0^1 e^{r²}·r dr dθ)
+3) Volumen esfera x²+y²+z²=25 fuera cilindro x²+y²=9:
+   Modo Polar: f=8*sqrt(25-r²), θ=0..pi/2, r=3..5 → 256π/3 ≈ 268.08
+
+CÓMO ESCRIBIR FUNCIONES
+-----------------------
+Usa:  x  y  r  theta  sin  cos  exp  sqrt  pi  e  + - * / **
+Ej:   exp(x**2 + y**2) ,  x**2 ,  sqrt(25-r**2) ,  r**2*cos(theta)**2
+OJO: usa ** para potencia, no ^ (el programa también acepta ^ y lo convierte).
+
+NOTA MODO POLAR
+---------------
+En modo Polar el programa multiplica solo por r (jacobiano).
+Tú escribe solo f(r,θ). Ej: si quieres ∫∫ e^{r²} r dr dθ escribe exp(r**2).

@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Instalar dependencias",
+      "type": "shell",
+      "command": "pip install -r requirements.txt",
+      "presentation": { "reveal": "always", "panel": "new" }
+    },
+    {
+      "label": "Ejecutar app",
+      "type": "shell",
+      "command": "python app_integrales_dobles.py",
+      "presentation": { "reveal": "always", "panel": "new" }
+    }
+  ]
+}

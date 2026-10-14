@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "▶ Integrales Dobles",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/app_integrales_dobles.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

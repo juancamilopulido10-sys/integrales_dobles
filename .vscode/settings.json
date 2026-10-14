@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "python.defaultInterpreterPath": "python",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  }
+}
